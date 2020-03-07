@@ -4,7 +4,7 @@ A 60% keyboard with only through hole components.
 
 Based off the Gingham designed by [Yiancar](https://yiancar-designs.com/portfolio/gingham/)
 
-Keyboard Maintainer: [UWA Makers](https://wiki.uwamakers.com//) and on [github](https://github.com/yiancar)  
+Keyboard Maintainer: [UWA Makers](https://wiki.uwamakers.com//)  
 Hardware Supported: ATMEGA328p with vusb 
 
 Make example for this keyboard (after setting up your build environment):

@@ -1,19 +1,18 @@
-# Gingham
-
-![gingham](https://yiancar-designs.com/wp-content/uploads/2019/06/IMG_20190625_233619.jpg)
+# Twill
 
 A 60% keyboard with only through hole components.   
 
-Keyboard Maintainer: [Yiancar](http://yiancar-designs.com/) and on [github](https://github.com/yiancar)  
-Hardware Supported: ATMEGA328p with vusb [PCB](https://github.com/yiancar/gingham_pcb)  
-Hardware Availability: https://yiancar-designs.com/, https://novelkeys.xyz, https://mechboards.co.uk/  
+Based off the Gingham designed by [Yiancar](https://yiancar-designs.com/portfolio/gingham/)
+
+Keyboard Maintainer: [UWA Makers](https://wiki.uwamakers.com//) and on [github](https://github.com/yiancar)  
+Hardware Supported: ATMEGA328p with vusb 
 
 Make example for this keyboard (after setting up your build environment):
-    make gingham:default
+    make twill:dave
 
 Flash firmware:
     // In bootloader mode
-    make gingham:default:program
+    make twill:dave:program
 
 Bootloader:
 use usbasploader HSGW's my repository.

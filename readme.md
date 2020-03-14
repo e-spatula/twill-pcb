@@ -5,7 +5,7 @@ A 60% keyboard with only through hole components.
 Based off the Gingham designed by [Yiancar](https://yiancar-designs.com/portfolio/gingham/)
 
 Keyboard Maintainer: [UWA Makers](https://wiki.uwamakers.com//)  
-Hardware Supported: ATMEGA328p with vusb 
+Hardware Supported: ATMEGA328p with vusb (hopefully vusb, we're working on it)
 
 Make example for this keyboard (after setting up your build environment):
     make twill:dave
@@ -13,6 +13,12 @@ Make example for this keyboard (after setting up your build environment):
 Flash firmware:
     // In bootloader mode
     make twill:dave:program
+
+For the moment the command to flash the firmware (assuming you've flashed the arduino bootloader):
+
+```avrdude -c usbtiny -P usb -v -p atmega328p -U flash:w:gingham_dave.hex:i```
+
+
 
 Bootloader:
 use usbasploader HSGW's my repository.

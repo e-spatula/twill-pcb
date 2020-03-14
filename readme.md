@@ -14,7 +14,7 @@ Flash firmware:
     // In bootloader mode
     make twill:dave:program
 
-For the moment the command to flash the firmware (assuming you've flashed the arduino bootloader):
+For the moment the command to flash the firmware, assuming you've flashed the arduino bootloader (using ISPTiny):
 
 ```avrdude -c usbtiny -P usb -v -p atmega328p -U flash:w:gingham_dave.hex:i```
 

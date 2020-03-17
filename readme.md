@@ -5,23 +5,30 @@ A 60% keyboard with only through hole components.
 Based off the Gingham designed by [Yiancar](https://yiancar-designs.com/portfolio/gingham/)
 
 Keyboard Maintainer: [UWA Makers](https://wiki.uwamakers.com//)  
-Hardware Supported: ATMEGA328p with vusb (hopefully vusb, we're working on it)
+Hardware Supported: ATMEGA328p with vusb
 
 Make example for this keyboard (after setting up your build environment):
-    make twill:dave
+    qmk compile -kb twill -km dave
 
 Flash firmware:
     // In bootloader mode
-    make twill:dave:program
+    qmk -kb twill -km dave
 
-For the moment the command to flash the firmware, assuming you've flashed the arduino bootloader (using ISPTiny):
 
+Previously we had to use a USBtinyISP for flashing, now that we have resolved issues relating to VUSB we can flash directly over USB, however the command will be kept here for posterity. If for some reason VUSB doesn't work for you then this will be guaranteed to work (provided you've flashed the Arduino bootloader via the Arduino IDE):
 ```avrdude -c usbtiny -P usb -v -p atmega328p -U flash:w:gingham_dave.hex:i```
 
 
 
 Bootloader:
-use usbasploader HSGW's my repository.
+
+To install the bootloader on the ATMega328Ps we use the usbasploader available from HSGW's repo:
 https://github.com/hsgw/USBaspLoader/tree/plaid
 
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
+Then we simply run ```flashbootloader.sh``` using a USBtinyISP to set the fuses and install the bootloader.
+
+To enter bootloader mode hold down the "boot" button on the keyboard as you plug it in, or alternatively while holding "boot" press "reset" and then release boot.  
+
+
+For specific instructions on how to flash firmware using your operating system using qmk see here [here](https://beta.docs.qmk.fm/tutorial/newbs)
+

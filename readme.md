@@ -25,10 +25,11 @@ Bootloader:
 To install the bootloader on the ATMega328Ps we use the usbasploader available from HSGW's repo:
 https://github.com/hsgw/USBaspLoader/tree/plaid
 
-Then we simply run ```flashbootloader.sh``` using a USBtinyISP to set the fuses and install the bootloader.
 
-To enter bootloader mode hold down the "boot" button on the keyboard as you plug it in, or alternatively while holding "boot" press "reset" and then release boot.  
+Then we simply run ```flashbootloader.sh``` using a USBtinyISP to set the fuses and install the bootloader (if you're like 14 year-old me you may be wondering how you run shell scripts, never fear look [here](https://www.taniarascia.com/how-to-create-and-use-bash-scripts/)).
+
+To enter bootloader mode hold down the "boot" button on the keyboard as you plug it in, or alternatively while holding "boot" press "reset" and then release "boot".  
 
 
-For specific instructions on how to flash firmware using your operating system using qmk see here [here](https://beta.docs.qmk.fm/tutorial/newbs)
+For specific instructions on how to flash firmware using your operating system using qmk see [here](https://beta.docs.qmk.fm/tutorial/newbs)
 
